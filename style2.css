@@ -1,67 +1,233 @@
 html, body, .container{height: 100%; margin: 0;}
 
-@media all and (max-width: 720px) {}
 
-html{
-    flex-wrap: wrap;
-}
 
-.item_a { grid-area: header; }
-.item_b { grid-area: nav; }
-.item_c { grid-area: main; }
-.item_e { grid-area: footer;}
+header { grid-area: header; }
+#categories {grid-area: categories; }
+#content { grid-area: main; }
+footer { grid-area: footer; }
+
+
 
 .container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 70px 50px auto 50px;
+    grid-template-rows: 120px 65px auto 80px;
     grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
+                "header"
+                "buttons"
+                "main"
+                "footer";
 }
 
 
-body div h1{
-    color: white;
-    background-color: #45a1ff;
-    width: 100%;
-    margin: 0%;
-}
-
-#buttons{
-    width : 100%;
-    display : flex;
+header {
     background-color: rgb(2,160,253);
     color: white;
-    cursor: pointer;
-}    
-
-#buttons  p { 
-    text-align: center; 
-    font-size: 18pt; 
-    width: 50%;
-} 
-
-body div .item_c img{
-    width: 100%;
+    text-indent: 1%;
 }
 
-body div .item_c{
-    display: inline-block;
-    column-width: 350px;
-}
 
-body div .item_c p#time{
-    position: relative;
-}
-
-body div .item_c p#price{
-    position: relative;
-}
-
-body footer{
-    background-color: #45a1ff;
+#button{
+    width : 100%;
+    display : flex;
     color: white;
+}
+
+
+
+#button div { 
+    width: 50%;
+}
+#button div p { 
+    text-align: center; 
+    font-size: 18pt;
+}
+
+#button #left_button{
+    background-color: rgb(69, 187, 255);
+    cursor: pointer;
+}
+
+#button #right_button{
+    background-color: rgb(2,160,253);
+}
+
+#button #right_button:hover{
+    background-color: rgb(69, 187, 255);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#articles { 
+    grid-area: articles; 
+}
+
+#infos {
+    grid-area: infos; 
+}
+
+#articles2 { 
+    grid-area: articles2; 
+}
+
+#infos2 {
+    grid-area: infos2; 
+}
+
+
+.container #content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+                "articles infos"
+                "articles2 infos2";
+    border: solid 15px white ;
+}
+
+
+
+.container #content #articles{
+    text-align : center;
+}
+
+
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#time_price{grid-area: time_price; }
+
+
+
+.container #content #infos{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas:
+                "title"
+                "description"
+                "time_price"; 
+}
+
+.container #content #infos #title{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+
+.container #content #infos #description{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+
+#time_price{
+    display : flex;
+}
+
+
+
+#time_price div {
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+
+
+#time_price #prix {
+    text-align: right;
+}
+
+#title2 { grid-area: title2; }
+#description2 {grid-area: description2; }
+#time_price_2 {grid-area: time_price_2; }
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas:
+                "title2"
+                "description2"
+                "time_price_2";
+}
+
+
+
+.container #content #articles2{
+    text-align : center;
+}
+
+#title { grid-area: title; }
+#description {grid-area: description; }
+#time_price {grid-area: time_price; }
+
+
+
+.container #content #infos2{
+    grid-template-columns: auto;
+    grid-template-rows: 20px auto 5px;
+    grid-template-areas:
+                "title"
+                "description"
+                "time_price";
+
+   
+
+}
+
+.container #content #infos2 #title2{
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+
+.container #content #infos2 #description2{
+    background-color: white;
+    padding: 2px;
+    text-indent: 5px;
+}
+
+
+
+
+#time_price_2{
+    display : flex;
+}
+
+
+
+#time_price_2 div {
+    width: 50%;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+
+
+#time_price_2 #prix2 {
+    text-align: right;
+}
+
+
+
+footer {
+    background-color: rgb(2,160,253);
+    color: white;
+    text-indent: 3%;
+}
+
+@media screen (max-width: 767px ){
+    .container{
+        width: 1500px;
+    }
 }
