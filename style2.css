@@ -1,0 +1,67 @@
+html, body, .container{height: 100%; margin: 0;}
+
+@media all and (max-width: 720px) {}
+
+html{
+    flex-wrap: wrap;
+}
+
+.item_a { grid-area: header; }
+.item_b { grid-area: nav; }
+.item_c { grid-area: main; }
+.item_e { grid-area: footer;}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 70px 50px auto 50px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+
+body div h1{
+    color: white;
+    background-color: #45a1ff;
+    width: 100%;
+    margin: 0%;
+}
+
+#buttons{
+    width : 100%;
+    display : flex;
+    background-color: rgb(2,160,253);
+    color: white;
+    cursor: pointer;
+}    
+
+#buttons  p { 
+    text-align: center; 
+    font-size: 18pt; 
+    width: 50%;
+} 
+
+body div .item_c img{
+    width: 100%;
+}
+
+body div .item_c{
+    display: inline-block;
+    column-width: 350px;
+}
+
+body div .item_c p#time{
+    position: relative;
+}
+
+body div .item_c p#price{
+    position: relative;
+}
+
+body footer{
+    background-color: #45a1ff;
+    color: white;
+}
